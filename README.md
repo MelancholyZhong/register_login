@@ -26,6 +26,17 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## What I have Implemented
+    1.Post /register
+    input userId，username, password to register a new user and save the record into the database
+    2.Post /login
+    input username and password, if the user exists and the password matches, will return a JWT token
+    3.Get /me
+    After JWTauthentication, will return the profile of current user (userId and username)
+    
+    JWT authentication used asymmetric key.
+    Password is stored in salted and hashed format.
+
 ## Installation
 
 ```bash
