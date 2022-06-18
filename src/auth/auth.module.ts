@@ -12,8 +12,9 @@ import { jwtConstants } from './constants';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: jwtConstants.secret,
-      signOptions: { expiresIn: '120s' },
+      privateKey: jwtConstants.privateKey,
+      publicKey: jwtConstants.publicKey,
+      signOptions: { expiresIn: '120s', algorithm: 'RS256' },
     }),
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy],
